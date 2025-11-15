@@ -1,0 +1,41 @@
+{
+  "name": "lynk_backend",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "skills",
+    "marketplace",
+    "services",
+    "exchange",
+    "masters",
+    "consulting",
+    "lynk",
+    "backend",
+    "frontend",
+    "api",
+    "nodejs",
+    "react",
+    "express"
+  ],
+  "homepage": "https://github.com/DiStudd/Lynk#readme",
+  "bugs": {
+    "url": "https://github.com/DiStudd/Lynk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiStudd/Lynk.git"
+  },
+  "license": "ISC",
+  "author": "DiStudd (Yushkov Vasiliy)",
+  "type": "module",
+  "main": "lynkapp.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/lynkapp.js",
+    "dev": "nodemon src/lynkapp.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.11"
+  }
+}
