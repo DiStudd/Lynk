@@ -30,13 +30,18 @@
   "type": "module",
   "main": "lynkapp.js",
   "scripts": {
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "start": "node src/lynkapp.js",
     "dev": "nodemon src/lynkapp.js"
   },
   "dependencies": {
+    "@prisma/client": "^6.19.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "prisma": "^6.19.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
   }
 }

@@ -1,15 +1,23 @@
 import express, {json} from "express"
 import cors from "cors"
-const app = express()
+import {getUserByName} from "./modules/users/user.repo.js";
+const app = express();
 
-const PORT = 3000
+const PORT = 3000;
 
-app.use(json())
-app.use(cors())
+app.use(json());
+app.use(cors());
 
-app.get("/", (req, res) => {
-    res.status(201).send({app_status: 'app is working ok'})
+app.get("/test", async (req, res) => {
+
+    res.status(201).send(req.query.q1 || null)
 })
+
+app.get(`/user/:name`, async (req, res) => {
+    const user = await getUserByName(req.params.name)
+    res.status(201).send(user)
+})
+
 
 app.listen(PORT, () => {
     console.log(`app listening on port ${PORT}`)
